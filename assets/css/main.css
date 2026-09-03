@@ -802,6 +802,8 @@ html.js .commit-list li.lit{opacity:1}
   background:var(--panel);
 }
 .csr-cards img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.csr-cards.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.csr-cards.cols-2 img{aspect-ratio:16/9}
 .csr-cards figcaption{
   padding:12px 14px;font-size:.85rem;color:var(--text-secondary);
 }
@@ -953,7 +955,7 @@ html.js .commit-list li.lit{opacity:1}
 @media (max-width:560px){
   .feat-grid{grid-template-columns:1fr}
   .port-grid,.legacy-grid{grid-template-columns:1fr}
-  .csr-cards{grid-template-columns:1fr}
+  .csr-cards,.csr-cards.cols-2{grid-template-columns:1fr}
   .offices{grid-template-columns:1fr}
   .award-row{grid-template-columns:1fr}
   .org-arms,.org-arms.cols-3{grid-template-columns:1fr}
