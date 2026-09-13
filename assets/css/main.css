@@ -1064,3 +1064,10 @@ html.js .commit-list li.lit{opacity:1}
 @media (max-width:560px){
   .pdf-grid{grid-template-columns:1fr}
 }
+
+/* audit: larger, brighter kickers on the hero journey and vision band */
+.stage .kicker,.md-band .kicker{
+  font-size:.95rem;
+  font-weight:500;
+  color:#eac26d;
+}
