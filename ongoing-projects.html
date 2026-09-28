@@ -55,7 +55,7 @@
             <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
             <li><a href="completed-projects.html">Completed Projects</a></li>
             <li><a href="projects-woh-hup.html">Projects of Woh Hup</a></li>
-            <li><a href="projects-lee-kim-tah.html">Projects of Lee Kim Tah</a></li>
+            <li><a href="projects-lee-kim-tah.html">Projects of <span class="nowrap">Lee Kim Tah</span></a></li>
           </ul>
         </li>
         <li class="has-drop">
@@ -104,7 +104,7 @@
       <a href="ongoing-projects.html">Ongoing Projects</a>
       <a href="completed-projects.html">Completed Projects</a>
       <a href="projects-woh-hup.html">Projects of Woh Hup</a>
-      <a href="projects-lee-kim-tah.html">Projects of Lee Kim Tah</a>
+      <a href="projects-lee-kim-tah.html">Projects of <span class="nowrap">Lee Kim Tah</span></a>
     </details>
     <details><summary>Services</summary>
       <a href="lw-construction.html">L&amp;W Construction</a>
@@ -138,26 +138,30 @@
 <section class="sec sec-tight">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="kicker">The live book of work</p>
+      <p class="kicker">Work in progress</p>
       <h2>Fifteen sites, four cities.</h2>
       <p class="sec-lede">Four projects in Bengaluru, four in Chennai, five in Pune and two in Hyderabad.</p>
     </div>
+    <div class="filter-bar reveal">
+      <div class="filter-row"><span class="filter-label">City</span><button class="tab is-on" data-f="city" data-v="all">All</button><button class="tab" data-f="city" data-v="Bengaluru">Bengaluru</button><button class="tab" data-f="city" data-v="Chennai">Chennai</button><button class="tab" data-f="city" data-v="Pune">Pune</button><button class="tab" data-f="city" data-v="Hyderabad">Hyderabad</button></div>
+      <div class="filter-row"><span class="filter-label">Sector</span><button class="tab is-on" data-f="sector" data-v="all">All</button><button class="tab" data-f="sector" data-v="it">IT &amp; commercial</button><button class="tab" data-f="sector" data-v="industrial">Industrial</button></div>
+    </div>
     <div class="port-grid stagger reveal">
-      <figure><img src="assets/img/proj-boeing.webp" alt="Boeing campus, Bengaluru" loading="lazy"><figcaption>Boeing &middot; Bengaluru</figcaption></figure>
-      <figure><img src="assets/img/proj-oneparamount.webp" alt="One Paramount towers, Chennai" loading="lazy"><figcaption>One Paramount &middot; Chennai</figcaption></figure>
-      <figure><img src="assets/img/proj-qualcomm-fn.webp" alt="Qualcomm F&N building, Bengaluru" loading="lazy"><figcaption>Qualcomm F&amp;N &middot; Bengaluru</figcaption></figure>
-      <figure><img src="assets/img/proj-aigp.webp" alt="AIGP Kharadi phases 1 and 2, Pune" loading="lazy"><figcaption>AIGP Kharadi Ph 1 &amp; 2 &middot; Pune</figcaption></figure>
-      <figure><img src="assets/img/proj-gateway.webp" alt="Gateway Office Parks, Chennai" loading="lazy"><figcaption>Gateway Office Parks &middot; Chennai</figcaption></figure>
-      <figure><img src="assets/img/proj-rmz-nexity.webp" alt="RMZ Nexity towers, Hyderabad" loading="lazy"><figcaption>RMZ Nexity &middot; Hyderabad</figcaption></figure>
-      <figure><img src="assets/img/proj-whitealpha.webp" alt="White Alpha development, Bengaluru" loading="lazy"><figcaption>White Alpha &middot; Bengaluru</figcaption></figure>
-      <figure><img src="assets/img/proj-capgemini.webp" alt="Capgemini Technology campus, Pune" loading="lazy"><figcaption>Capgemini Technology &middot; Pune</figcaption></figure>
-      <figure><img src="assets/img/proj-tcl-chennai.webp" alt="TCL project, Chennai" loading="lazy"><figcaption>TCL &middot; Chennai</figcaption></figure>
-      <figure><img src="assets/img/proj-rmz-spire.webp" alt="RMZ Spire, Hyderabad" loading="lazy"><figcaption>RMZ Spire &middot; Hyderabad</figcaption></figure>
-      <figure><img src="assets/img/proj-futura.webp" alt="Futura Tech Park, Chennai" loading="lazy"><figcaption>Futura Tech Park &middot; Chennai</figcaption></figure>
-      <figure><img src="assets/img/proj-itpp4.webp" alt="International Tech Park phase 4, Pune" loading="lazy"><figcaption>ITPP4 &middot; Pune</figcaption></figure>
-      <figure><img src="assets/img/proj-wistron.webp" alt="Wistron facility, Bengaluru" loading="lazy"><figcaption>Wistron &middot; Bengaluru</figcaption></figure>
-      <figure><img src="assets/img/proj-techmahindra.webp" alt="Tech Mahindra campus, Pune" loading="lazy"><figcaption>Tech Mahindra &middot; Pune</figcaption></figure>
-      <figure><img src="assets/img/proj-tcl-pune.webp" alt="TCL project, Pune" loading="lazy"><figcaption>TCL &middot; Pune</figcaption></figure>
+      <figure data-city="Bengaluru" data-sector="it"><img src="assets/img/proj-boeing.webp" alt="Boeing campus, Bengaluru" loading="lazy"><figcaption>Boeing &middot; Bengaluru</figcaption></figure>
+      <figure data-city="Chennai" data-sector="it"><img src="assets/img/proj-oneparamount.webp" alt="One Paramount towers, Chennai" loading="lazy"><figcaption>One Paramount &middot; Chennai</figcaption></figure>
+      <figure data-city="Bengaluru" data-sector="it"><img src="assets/img/proj-qualcomm-fn.webp" alt="Qualcomm F&N building, Bengaluru" loading="lazy"><figcaption>Qualcomm F&amp;N &middot; Bengaluru</figcaption></figure>
+      <figure data-city="Pune" data-sector="it"><img src="assets/img/proj-aigp.webp" alt="AIGP Kharadi phases 1 and 2, Pune" loading="lazy"><figcaption>AIGP Kharadi Ph 1 &amp; 2 &middot; Pune</figcaption></figure>
+      <figure data-city="Chennai" data-sector="it"><img src="assets/img/proj-gateway.webp" alt="Gateway Office Parks, Chennai" loading="lazy"><figcaption>Gateway Office Parks &middot; Chennai</figcaption></figure>
+      <figure data-city="Hyderabad" data-sector="it"><img src="assets/img/proj-rmz-nexity.webp" alt="RMZ Nexity towers, Hyderabad" loading="lazy"><figcaption>RMZ Nexity &middot; Hyderabad</figcaption></figure>
+      <figure data-city="Bengaluru" data-sector="it"><img src="assets/img/proj-whitealpha.webp" alt="White Alpha development, Bengaluru" loading="lazy"><figcaption>White Alpha &middot; Bengaluru</figcaption></figure>
+      <figure data-city="Pune" data-sector="it"><img src="assets/img/proj-capgemini.webp" alt="Capgemini Technology campus, Pune" loading="lazy"><figcaption>Capgemini Technology &middot; Pune</figcaption></figure>
+      <figure data-city="Chennai" data-sector="industrial"><img src="assets/img/proj-tcl-chennai.webp" alt="TCL project, Chennai" loading="lazy"><figcaption>TCL &middot; Chennai</figcaption></figure>
+      <figure data-city="Hyderabad" data-sector="it"><img src="assets/img/proj-rmz-spire.webp" alt="RMZ Spire, Hyderabad" loading="lazy"><figcaption>RMZ Spire &middot; Hyderabad</figcaption></figure>
+      <figure data-city="Chennai" data-sector="it"><img src="assets/img/proj-futura.webp" alt="Futura Tech Park, Chennai" loading="lazy"><figcaption>Futura Tech Park &middot; Chennai</figcaption></figure>
+      <figure data-city="Pune" data-sector="it"><img src="assets/img/proj-itpp4.webp" alt="International Tech Park phase 4, Pune" loading="lazy"><figcaption>ITPP4 &middot; Pune</figcaption></figure>
+      <figure data-city="Bengaluru" data-sector="industrial"><img src="assets/img/proj-wistron.webp" alt="Wistron facility, Bengaluru" loading="lazy"><figcaption>Wistron &middot; Bengaluru</figcaption></figure>
+      <figure data-city="Pune" data-sector="it"><img src="assets/img/proj-techmahindra.webp" alt="Tech Mahindra campus, Pune" loading="lazy"><figcaption>Tech Mahindra &middot; Pune</figcaption></figure>
+      <figure data-city="Pune" data-sector="industrial"><img src="assets/img/proj-tcl-pune.webp" alt="TCL project, Pune" loading="lazy"><figcaption>TCL &middot; Pune</figcaption></figure>
     </div>
   </div>
 </section>
@@ -179,10 +183,10 @@
     <div class="foot-top">
       <div class="foot-brand">
         <img src="assets/img/logo-light.png" alt="L&W Construction. Building with Integrity." width="190" height="60" loading="lazy">
-        <p>The Indian arm of Singapore's Lee Kim Tah&ndash;Woh Hup group.<br>Building with integrity since 2006.</p>
+        <p>The Indian arm of Singapore's <span class="nowrap">Lee Kim Tah&ndash;Woh Hup</span> group.<br>Building with integrity since 2006.<br>Global Heritage. Indian Execution. Landmark Delivery.</p>
         <div class="foot-parents">
-          <a href="https://www.wohhup.com/" target="_blank" rel="noopener"><img src="assets/img/logo-wohhup.png" alt="Woh Hup" loading="lazy"></a>
           <a href="https://leekimtah.com/" target="_blank" rel="noopener"><img src="assets/img/logo-leekimtah.png" alt="Lee Kim Tah" loading="lazy"></a>
+          <a href="https://www.wohhup.com/" target="_blank" rel="noopener"><img src="assets/img/logo-wohhup.png" alt="Woh Hup" loading="lazy"></a>
         </div>
       </div>
       <nav class="foot-nav" aria-label="Footer">
@@ -201,7 +205,7 @@
           <a href="ongoing-projects.html">Ongoing</a>
           <a href="completed-projects.html">Completed</a>
           <a href="projects-woh-hup.html">Woh Hup</a>
-          <a href="projects-lee-kim-tah.html">Lee Kim Tah</a>
+          <a href="projects-lee-kim-tah.html"><span class="nowrap">Lee Kim Tah</span></a>
         </div>
         <div>
           <h4>Services</h4>

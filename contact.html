@@ -55,7 +55,7 @@
             <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
             <li><a href="completed-projects.html">Completed Projects</a></li>
             <li><a href="projects-woh-hup.html">Projects of Woh Hup</a></li>
-            <li><a href="projects-lee-kim-tah.html">Projects of Lee Kim Tah</a></li>
+            <li><a href="projects-lee-kim-tah.html">Projects of <span class="nowrap">Lee Kim Tah</span></a></li>
           </ul>
         </li>
         <li class="has-drop">
@@ -104,7 +104,7 @@
       <a href="ongoing-projects.html">Ongoing Projects</a>
       <a href="completed-projects.html">Completed Projects</a>
       <a href="projects-woh-hup.html">Projects of Woh Hup</a>
-      <a href="projects-lee-kim-tah.html">Projects of Lee Kim Tah</a>
+      <a href="projects-lee-kim-tah.html">Projects of <span class="nowrap">Lee Kim Tah</span></a>
     </details>
     <details><summary>Services</summary>
       <a href="lw-construction.html">L&amp;W Construction</a>
@@ -131,7 +131,7 @@
     <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>Contact</p>
     <p class="kicker">Contact</p>
     <h1>Reach us</h1>
-    <p class="page-lede">Four offices across India and two inboxes that get read. We are available Monday to Friday, 10:00 to 17:00.</p>
+    <p class="page-lede">Four offices across India, with dedicated inboxes for business and HR enquiries. We are available Monday to Friday, 10:00 to 17:00.</p>
   </div>
 </section>
 
@@ -143,6 +143,16 @@
     </div>
     <div class="contact-grid">
       <form class="enquiry reveal" id="enquiry" novalidate>
+        <div class="field">
+          <label for="f-type">Enquiry type</label>
+          <select id="f-type" name="type">
+            <option>General enquiry</option>
+            <option selected>Business / project enquiry</option>
+            <option>Careers / HR</option>
+            <option>Vendor / supplier</option>
+            <option>Media / corporate communication</option>
+          </select>
+        </div>
         <div class="field">
           <label for="f-name">Your name</label>
           <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -156,7 +166,7 @@
           <textarea id="f-msg" name="msg" rows="5" placeholder="A commercial tower in Pune, around 40 floors..." required></textarea>
         </div>
         <button class="btn btn-solid" type="submit">Send enquiry</button>
-        <p class="form-note" id="form-note" aria-live="polite">The button opens your email app with the message drafted and addressed to headoffice@landwindia.com. Nothing is sent until you press send there.</p>
+        <p class="form-note" id="form-note" aria-live="polite">The button opens your email app with the message drafted and addressed to the right L&amp;W inbox for your enquiry type. Nothing is sent until you press send there.</p>
       </form>
       <div class="offices stagger reveal">
         <div class="office">
@@ -205,10 +215,10 @@
     <div class="foot-top">
       <div class="foot-brand">
         <img src="assets/img/logo-light.png" alt="L&W Construction. Building with Integrity." width="190" height="60" loading="lazy">
-        <p>The Indian arm of Singapore's Lee Kim Tah&ndash;Woh Hup group.<br>Building with integrity since 2006.</p>
+        <p>The Indian arm of Singapore's <span class="nowrap">Lee Kim Tah&ndash;Woh Hup</span> group.<br>Building with integrity since 2006.<br>Global Heritage. Indian Execution. Landmark Delivery.</p>
         <div class="foot-parents">
-          <a href="https://www.wohhup.com/" target="_blank" rel="noopener"><img src="assets/img/logo-wohhup.png" alt="Woh Hup" loading="lazy"></a>
           <a href="https://leekimtah.com/" target="_blank" rel="noopener"><img src="assets/img/logo-leekimtah.png" alt="Lee Kim Tah" loading="lazy"></a>
+          <a href="https://www.wohhup.com/" target="_blank" rel="noopener"><img src="assets/img/logo-wohhup.png" alt="Woh Hup" loading="lazy"></a>
         </div>
       </div>
       <nav class="foot-nav" aria-label="Footer">
@@ -227,7 +237,7 @@
           <a href="ongoing-projects.html">Ongoing</a>
           <a href="completed-projects.html">Completed</a>
           <a href="projects-woh-hup.html">Woh Hup</a>
-          <a href="projects-lee-kim-tah.html">Lee Kim Tah</a>
+          <a href="projects-lee-kim-tah.html"><span class="nowrap">Lee Kim Tah</span></a>
         </div>
         <div>
           <h4>Services</h4>

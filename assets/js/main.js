@@ -158,10 +158,10 @@
       }
     }
     /* camera */
-    var s = 1.06 + p * 0.20;
+    var s = 1.05 + p * 0.15;
     if (Math.abs(s - camScale) > 0.0008) {
       camScale = s;
-      cam.style.transform = 'translate3d(0,' + (p * -3.5).toFixed(2) + '%,0) scale(' + s.toFixed(4) + ')';
+      cam.style.transform = 'translate3d(0,' + (p * -2.5).toFixed(2) + '%,0) scale(' + s.toFixed(4) + ')';
     }
     /* progress steps */
     var lit = Math.min(5, Math.floor(p * 5.999));
@@ -183,7 +183,7 @@
   function tick(now) {
     var dt = Math.min(100, now - (lastTick || now));
     lastTick = now;
-    var k = 0.16;
+    var k = 0.22;
     shown += (target - shown) * (1 - Math.pow(1 - k, dt / 16.667));
     var converged = Math.abs(target - shown) < 0.0005 && loadK >= 1;
     if (converged) {
@@ -213,7 +213,12 @@
 
   var heroIO = new IntersectionObserver(function (entries) {
     heroOnScreen = entries[entries.length - 1].isIntersecting;
-    if (heroOnScreen) kick();
+    if (heroOnScreen) {
+      kick();
+      stopMotes();   /* the hero image fully covers the environment layer */
+    } else {
+      startMotes();
+    }
   });
   if (hero) heroIO.observe(hero);
 
@@ -594,12 +599,40 @@
         (!name ? form.querySelector('#f-name') : form.querySelector('#f-msg')).focus();
         return;
       }
-      var subject = 'Project enquiry from ' + name + (org ? ' (' + org + ')' : '');
+      var typeEl = form.querySelector('#f-type');
+      var etype = typeEl ? typeEl.value : 'Project enquiry';
+      var to = /Careers/.test(etype) ? 'hrd@landwindia.com' : 'headoffice@landwindia.com';
+      var subject = etype + ' from ' + name + (org ? ' (' + org + ')' : '');
       var body = msg + '\n\n' + name + (org ? '\n' + org : '');
-      window.location.href = 'mailto:headoffice@landwindia.com?subject=' +
+      window.location.href = 'mailto:' + to + '?subject=' +
         encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      note.textContent = 'Your email app should now be open with the drafted enquiry. Press send there and it reaches headoffice@landwindia.com.';
+      note.textContent = 'Your email app should now be open with the drafted enquiry. Press send there and it reaches ' + to + '.';
       note.classList.add('sent');
+    });
+  }
+
+  /* ============================================================
+     Project portfolio filters (ongoing / completed pages)
+     ============================================================ */
+  var filterBar = document.querySelector('.filter-bar');
+  if (filterBar) {
+    var fstate = { city: 'all', sector: 'all' };
+    function applyFilters() {
+      Array.prototype.forEach.call(document.querySelectorAll('.port-grid figure'), function (fig) {
+        var ok = (fstate.city === 'all' || fig.getAttribute('data-city') === fstate.city) &&
+                 (fstate.sector === 'all' || fig.getAttribute('data-sector') === fstate.sector);
+        fig.hidden = !ok;
+      });
+    }
+    filterBar.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab');
+      if (!b) return;
+      var group = b.getAttribute('data-f');
+      fstate[group] = b.getAttribute('data-v');
+      Array.prototype.forEach.call(filterBar.querySelectorAll('.tab[data-f="' + group + '"]'), function (t) {
+        t.classList.toggle('is-on', t === b);
+      });
+      applyFilters();
     });
   }
 

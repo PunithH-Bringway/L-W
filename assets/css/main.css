@@ -3,6 +3,11 @@
    Palette, type and motion per the design package.
    ============================================================ */
 
+@font-face{
+  font-family:"AmpDisplay";
+  src:local("Arial Bold"),local("Arial");
+  unicode-range:U+26;
+}
 :root{
   --canvas:#12151d;
   --canvas-deep:#0c0f15;
@@ -17,7 +22,7 @@
   --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
   --ease-out:cubic-bezier(.22,.61,.2,1);
   --ease-io:cubic-bezier(.6,.04,.25,1);
-  --font-display:"Archivo",system-ui,sans-serif;
+  --font-display:"AmpDisplay","Archivo",system-ui,sans-serif;
   --font-body:"Instrument Sans",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono",ui-monospace,monospace;
   --nav-h:76px;
@@ -84,6 +89,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   margin:0 0 1.1em;
 }
 
+.nowrap{white-space:nowrap}
 .text-link{
   color:var(--accent);
   text-decoration:none;
@@ -230,7 +236,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
    ============================================================ */
 .hero{position:relative;height:600vh}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-.cam{position:absolute;inset:0;will-change:transform}
+.cam{position:absolute;inset:0;will-change:transform;contain:layout paint}
 .cam img{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   transform:translateZ(0);
@@ -253,6 +259,9 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
   visibility:hidden;
   pointer-events:none;
   text-shadow:var(--tshadow);
+  will-change:opacity;
+  transform:translateZ(0);
+  contain:layout paint;
 }
 .band.on{visibility:visible}
 .band .btn{text-shadow:none;pointer-events:none}
@@ -825,7 +834,8 @@ html.js .commit-list li.lit{opacity:1}
 .news-card:hover{border-color:var(--accent-muted);transform:translateY(-4px)}
 .news-src{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0}
 .news-card h3{font-size:1.15rem;line-height:1.35;margin:0;flex:1}
-.news-card .text-link{align-self:flex-start;font-size:.9rem}
+.news-card .nowrap{white-space:nowrap}
+.text-link{align-self:flex-start;font-size:.9rem}
 
 .event{
   display:grid;grid-template-columns:1fr 1fr;
@@ -1071,3 +1081,26 @@ html.js .commit-list li.lit{opacity:1}
   font-weight:500;
   color:#eac26d;
 }
+
+/* client: straight (justified) profile paragraphs */
+.profile-copy .lede{text-align:justify;text-wrap:pretty}
+
+/* client: justified body text site-wide */
+.prose p,
+.lede,
+.parent-col p,
+.svc-body>p:not(.svc-index):not(.svc-tag),
+.feat-info>p:not(.kicker),
+.comm-feature-body p,
+.event-body>p:not(.kicker),
+.md-copy,
+.page-lede,
+.port-more{text-align:justify;text-wrap:pretty}
+
+/* project filters + enquiry select + why-join */
+.filter-bar{display:grid;gap:10px;margin:0 0 28px}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.filter-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);margin-right:6px;min-width:52px}
+.port-grid figure[hidden]{display:none}
+.field select{font:inherit;color:var(--text-primary);background:var(--canvas-deep);border:1px solid rgba(169,174,185,.28);border-radius:6px;padding:12px 14px;transition:border-color .3s var(--ease-out)}
+.field select:focus{outline:none;border-color:var(--accent)}
