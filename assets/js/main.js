@@ -637,6 +637,25 @@
   }
 
   /* ============================================================
+     Privacy notice (no tracking cookies on this site)
+     ============================================================ */
+  try {
+    if (!localStorage.getItem('lw-notice')) {
+      var consent = document.createElement('div');
+      consent.className = 'consent';
+      consent.setAttribute('role', 'region');
+      consent.setAttribute('aria-label', 'Privacy notice');
+      consent.innerHTML = '<p>This website sets no tracking or advertising cookies. One browser preference remembers that you have seen this notice. <a class="text-link" href="privacy-policy.html">Privacy Policy</a></p>' +
+        '<button class="btn btn-solid" type="button">Got it</button>';
+      consent.querySelector('button').addEventListener('click', function () {
+        try { localStorage.setItem('lw-notice', '1'); } catch (e) {}
+        consent.remove();
+      });
+      document.body.appendChild(consent);
+    }
+  } catch (e) {}
+
+  /* ============================================================
      Boot
      ============================================================ */
   document.getElementById('year').textContent = String(new Date().getFullYear());
