@@ -1117,3 +1117,17 @@ html.js .commit-list li.lit{opacity:1}
 .consent p{margin:0;font-size:.88rem;color:#cdd2db;flex:1 1 320px}
 .consent .btn{padding:10px 20px;font-size:.85rem}
 @media (max-width:560px){.consent{left:10px;right:10px;bottom:10px}}
+
+/* careers: expandable role responsibilities */
+.role-details{margin:0 0 16px;border-top:1px solid var(--line);padding-top:14px}
+.role-details summary{
+  cursor:pointer;list-style:none;
+  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);
+}
+.role-details summary::-webkit-details-marker{display:none}
+.role-details summary::after{content:"  +";color:var(--accent)}
+.role-details[open] summary::after{content:"  \2212"}
+.role-details ul{margin:14px 0 4px;display:grid;gap:8px;color:var(--text-secondary);font-size:.9rem;line-height:1.55}
+.role-details ul li{padding-left:18px;position:relative}
+.role-details ul li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;background:var(--accent);clip-path:polygon(0 100%,100% 100%,100% 65%,65% 65%,65% 30%,35% 30%,35% 0,0 0)}
